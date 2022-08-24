@@ -2468,7 +2468,12 @@ body.is-touch .main {
 }
 
 @media screen and (max-width: 480px) {
-
+	#one {
+		background: url("images/overlay.png"), url("../../images/ak_one_b.jpg");
+		background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+	}
 	#contact .box {
 		padding: 1em 1em 2em 1em;
 	}
