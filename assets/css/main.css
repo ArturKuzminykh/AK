@@ -2284,7 +2284,7 @@ body.is-touch .main {
 	}
 
 	.main.style2 {
-		padding: 6em 15px 6em 15px;
+		padding: 6em 15px 3em 15px;
 	}
 
 	.main.style2:before,
@@ -2297,6 +2297,7 @@ body.is-touch .main {
 	}
 
 	.main.style2 .content {
+		/* margin-top: 20em; */
 		width: 100%;
 		max-width: 100%;
 		text-align: center;
@@ -2427,7 +2428,7 @@ body.is-touch .main {
 /* Two */
 
 #two {
-	background: url("images/overlay.png"), url("../../images/two.jpg");
+	background: url("images/overlay.png"), url("../../images/03ak_3.jpg");
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
@@ -2467,9 +2468,9 @@ body.is-touch .main {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 736px) {
 	#one {
-		background: url("images/overlay.png"), url("../../images/ak_one_b.jpg");
+		background: url("images/overlay.png"), url("../../images/ak_one_phone_2.jpg");
 		background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
@@ -2478,4 +2479,10 @@ body.is-touch .main {
 		padding: 1em 1em 2em 1em;
 	}
 
+}
+.cvlink {
+	/* text-decoration:none; */
+}
+.cvlink:hover {
+	color: rgb(217, 23, 23) !important; 
 }
