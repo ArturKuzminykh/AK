@@ -49,7 +49,7 @@
     cameraFlight.duration = 1.0;
     cameraFlight.fitFOV = 25;
 
-    viewer.camera.eye = [-2.56, 8.38, 8.27];
+    viewer.camera.eye = [-7.56, 8.38, 16.27];
     viewer.camera.look = [13.44, 3.31, -14.83];
     viewer.camera.up = [0.10, 0.98, -0.14];
 
@@ -75,15 +75,15 @@
         rightMargin: 10
     });
 
-    //------------------------------------------------------------------------------------------------------------------
-    // Create an IFC structure tree view
-    //------------------------------------------------------------------------------------------------------------------
+    // //------------------------------------------------------------------------------------------------------------------
+    // // Create an IFC structure tree view
+    // //------------------------------------------------------------------------------------------------------------------
 
-    const treeView = new TreeViewPlugin(viewer, {
-        containerElement: document.getElementById("treeViewContainer"),
-        autoExpandDepth: 1, // Initially expanding "types" makes for a lot of nodes to scroll though - let's not expand
-        hierarchy: "types"
-    });
+    // const treeView = new TreeViewPlugin(viewer, {
+    //     containerElement: document.getElementById("treeViewContainer"),
+    //     autoExpandDepth: 1, // Initially expanding "types" makes for a lot of nodes to scroll though - let's not expand
+    //     hierarchy: "types"
+    // });
     //------------------------------------------------------------------------------------------------------------------
     // Load model and metadata
     //------------------------------------------------------------------------------------------------------------------
@@ -92,7 +92,7 @@
 
     const model = xktLoader.load({
         id: "myModel",
-        src: "./gallery/62bb0c97c4d452.15018739.ifc.xkt",
+        src: "./gallery/FormGeneric.ifc.xkt",
         excludeTypes: ["IfcSpace"],
         globalizeObjectIds: true, // to map GUIDs
         edges: true
@@ -100,39 +100,39 @@
 
 
     //------------------------------------------------------------------------------------------------------------------
-    // Click Entities to colorize them
-    //------------------------------------------------------------------------------------------------------------------
+    // // Click Entities to colorize them
+    // //------------------------------------------------------------------------------------------------------------------
 
-    var lastEntity = null;
-    var lastColorize = null;
+    // var lastEntity = null;
+    // var lastColorize = null;
 
-    viewer.cameraControl.on("picked", (pickResult) => {
+    // viewer.cameraControl.on("picked", (pickResult) => {
 
-        if (!pickResult.entity) {
-            return;
-        }
+    //     if (!pickResult.entity) {
+    //         return;
+    //     }
 
-        console.log(pickResult.entity.id);
+    //     console.log(pickResult.entity.id);
 
-        if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
+    //     if (!lastEntity || pickResult.entity.id !== lastEntity.id) {
 
-            if (lastEntity) {
-                lastEntity.colorize = lastColorize;
-            }
+    //         if (lastEntity) {
+    //             lastEntity.colorize = lastColorize;
+    //         }
 
-            lastEntity = pickResult.entity;
-            lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
+    //         lastEntity = pickResult.entity;
+    //         lastColorize = pickResult.entity.colorize ? pickResult.entity.colorize.slice() : null;
 
-            pickResult.entity.colorize = [0.0, 1.0, 0.0];
-        }
-    });
+    //         pickResult.entity.colorize = [0.0, 1.0, 0.0];
+    //     }
+    // });
 
-    viewer.cameraControl.on("pickedNothing", () => {
-        if (lastEntity) {
-            lastEntity.colorize = lastColorize;
-            lastEntity = null;
-        }
-    });
+    // viewer.cameraControl.on("pickedNothing", () => {
+    //     if (lastEntity) {
+    //         lastEntity.colorize = lastColorize;
+    //         lastEntity = null;
+    //     }
+    // });
 </script>
 
 
