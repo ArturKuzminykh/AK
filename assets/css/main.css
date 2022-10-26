@@ -921,7 +921,7 @@ input[type="reset"].style3.down,
 .button.style3.down,
 button.style3.down {
 	color: red;
-	background-image: url("images/gogo.svg");
+	background-image: url("images/gomus.svg");
 	background-size: 70%;
 	
 }
@@ -2409,7 +2409,7 @@ body.is-touch .main {
 /* Intro */
 
 #intro {
-	background: url("images/parametricAI_techture_2.png"), url("../../images/parametricAI_techture_2.png");
+	background: url("images/overlay.png"), url("../../images/urban.jpg");
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, bottom center;
@@ -2419,7 +2419,7 @@ body.is-touch .main {
 /* One */
 
 #one {
-	background: url("images/overlay.png"), url("../../images/ak_one.jpg");
+	background: url("images/overlay.png"), url("../../images/ak_one_d.jpg");
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
@@ -2428,7 +2428,7 @@ body.is-touch .main {
 /* Two */
 
 #two {
-	background: url("images/overlay.png"), url("../../images/03ak_3.jpg");
+	background: url("images/overlay.png"), url("../../images/03ak_3b.jpg");
 	background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
