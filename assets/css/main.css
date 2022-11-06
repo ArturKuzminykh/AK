@@ -2468,9 +2468,10 @@ body.is-touch .main {
 
 }
 
-@media screen and (max-width: 736px) {
+
+@media screen and (max-width: 1000px) {
 	#one {
-		background: url("images/overlay.png"), url("../../images/ak_one_phone_2.jpg");
+		background: url("images/overlay.png"), url("../../images/ak_one_d_ipad.jpg");
 		background-size: 256px 256px, cover;
 	background-attachment: fixed, fixed;
 	background-position: top left, center center;
@@ -2478,8 +2479,23 @@ body.is-touch .main {
 	#contact .box {
 		padding: 1em 1em 2em 1em;
 	}
-
 }
+
+
+@media screen and (max-width: 736px) {
+	#one {
+		background: url("images/overlay.png"), url("../../images/ak_one_d_phone.jpg");
+		background-size: 256px 256px, cover;
+	background-attachment: fixed, fixed;
+	background-position: top left, center center;
+	}
+	#contact .box {
+		padding: 1em 1em 2em 1em;
+	}
+}
+
+
+
 .cvlink {
 	/* text-decoration:none; */
 }
